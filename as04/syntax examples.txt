@@ -1,0 +1,31 @@
+<!------------------Header.php--------------------->
+<!DOCTYPE html>
+<html>
+<head>
+	<title><?php echo $page_title; ?></title>
+	<link rel="stylesheet" href="styles.css">
+</head>
+<body>
+<div id="container">
+	<ul id="menu">
+		<li><a href="autumn.php">Autumn</a></li>
+		<li><a href="beaches.php">Beaches</a></li>
+		<li><a href="cityscapes.php">Cityscapes</a></li>
+		<li><a href="forests.php">Forests</a></li>
+		<li><a href="sunsets.php">Sunsets</a></li>
+	</ul>
+
+  <?php
+function displayImage($path, $caption){
+    /* We need a variable to hold the string. Remember that a string is just a chunk of characters in quotes.
+       We are using double quotes for strings in PHP so that we don't have to use the (.) operator so much.
+       Notice here we use single quotes for the html class attribute. */
+    $html = "<div class='img'>";
+    /* Notice here we use the concatenation assignment operator to add this line to the current value of the $html variable */
+    $html .= "<img src='$path' alt='$caption'/>"; /* We use our arguments here $path and $caption */
+    $html .= "<div class='desc'>$caption</div></div>"; /* We use our argument $caption here */
+    /*Return the string variable. The $html variable now contains our html string with the values that were passed into the function when it is called */
+    return $html;
+}
+/* This isn't all. There is one more piece. */
+?>

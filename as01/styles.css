@@ -1,0 +1,15 @@
+p {
+color: grey;
+font-size: 14px;
+}
+
+
+.color_change {
+color: silver;
+font-size: 16px;
+}
+
+
+#main_header {
+background-color: #008080;
+}
